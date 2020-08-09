@@ -1,14 +1,16 @@
 <div>
-  <div>
-    <p>Imię: {{player.name}}</p>
-  </div>
-  <div id="showImage">
-    <ul *ngFor="let card of cards" >
-      <li><img src="{{card.image}}" alt=""></li>
-    </ul>
+  <div class="header">
+    <p>Imię: <strong>{{player.name}}</strong></p>
+    <p>Wynik: <strong>{{score}}</strong></p>
+    <button class="btn btn-red" (click)="drawCard()" [disabled]="!player.isActive">Ciągnij kartę</button>
+    <button class="btn btn-red">Pasuj</button>
   </div>
 
-  <p>Wynik: {{score}}</p>
-  <button (click)="drawCard()" [disabled]="!player.isActive">Ciągnij kartę</button>
-  <button>Pasuj</button>
+  <div>
+    <div id="myimages" *ngFor="let card of cards" >
+      <img src="{{card.image}}" alt="">
+    </div>
+  </div>
+
+
 </div>

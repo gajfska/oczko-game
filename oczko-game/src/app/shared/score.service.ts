@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Card} from './card.model';
+import {GameResult} from './game-result.model';
 
 @Injectable({providedIn: 'root'})
-
-
 export class ScoreService {
   private arrayApparentValues = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'JACK', 'QUEEN', 'KING', 'ACE'];
   private arrayCorrectValues = [2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 11];
@@ -25,19 +24,16 @@ export class ScoreService {
     return totalScore;
   }
 
-  checkIfEndGame(totalScore: number, cardsCount: number): boolean {
+  checkGameResult(totalScore: number, cardsCount: number): GameResult {
     if (totalScore === 22 && cardsCount === 2) {
-      console.log('Wygraleś asami');
-      return true;
+      return GameResult.won;
     }
     if (totalScore >= 22) {
-      console.log('przegrałes');
-      return true;
+      return GameResult.lost;
     }
     if (totalScore === 21){
-      console.log('wygrałeś');
-      return true;
+      return GameResult.won;
     }
-    return false;
+    return GameResult.inProgress;
   }
 }
