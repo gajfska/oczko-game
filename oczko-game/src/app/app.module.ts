@@ -6,6 +6,7 @@ import { GameComponent } from './game/game.component';
 import { MainScreenComponent } from './main-screen/main-screen.component';
 import { PlayerComponent } from './game/player/player.component';
 import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
