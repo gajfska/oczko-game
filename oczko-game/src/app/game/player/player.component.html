@@ -1,9 +1,9 @@
 <div>
   <div class="header">
-    <p>Imię: <strong>{{player.name}}</strong></p>
-    <p>Wynik: <strong>{{score}}</strong></p>
-    <button class="btn btn-red" (click)="drawCard()" [disabled]="!player.isActive">Ciągnij kartę</button>
-    <button class="btn btn-red">Pasuj</button>
+    <p>Name: <strong>{{player.name}}</strong></p>
+    <p>Score: <strong>{{player.score}}</strong></p>
+    <button class="btn btn-red" (click)="drawCardAction()" [disabled]="!player.isActive">Draw</button>
+    <button class="btn btn-red" (click)="passAction()" [disabled]="isPassDisabled()">Pass</button>
   </div>
 
   <div>

@@ -1,13 +1,15 @@
+import {GameResult} from './game-result.model';
+
 export class PlayerModel {
   isActive: boolean;
   name: string;
-  isPlaying: boolean;
-  isFirstPlayer: boolean;
 
-  constructor(state: boolean, name: string, isPlaying: boolean, isFirstPlayer: boolean) {
+  isPlaying = true;
+  score = 0;
+  gameResult = GameResult.inProgress;
+
+  constructor(state: boolean, name: string) {
     this.isActive = state;
     this.name = name;
-    this.isPlaying = isPlaying;
-    this.isFirstPlayer = isFirstPlayer;
   }
 }
