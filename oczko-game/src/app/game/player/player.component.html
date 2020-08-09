@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <p>Imię: {{player.name}}</p>
+  </div>
+  <div id="showImage">
+    <ul *ngFor="let card of cards" >
+      <li><img src="{{card.image}}" alt=""></li>
+    </ul>
+  </div>
+
+  <p>Wynik: {{score}}</p>
+  <button (click)="drawCard()" [disabled]="!player.isActive">Ciągnij kartę</button>
+  <button>Pasuj</button>
+</div>
