@@ -6,6 +6,10 @@ Projekt przedstawia grę karcianą “oczko”. Aplikacja składa się z dwóch 
 - strony głównej, gdzie użytkownik może wybrać tryb gry (singleplayer lub multiplayer)
 - okna gry, które zawiera nazwę użytkownika, ilość zdobytych punktów, rozdawane karty oraz przyciski “Draw” i “Pass”
 
+## Testy
+
+Napisano przykładowe testy jednostkowe dla pliku score.service.ts.
+
 ## Użyte technologie
 
  - HTML
@@ -13,7 +17,7 @@ Projekt przedstawia grę karcianą “oczko”. Aplikacja składa się z dwóch 
  - CSS
  - Bootstrap
  
-## Installation
+## Instalacja
 
 Po ściągnięciu repozytorium należy wykonać polecenie:
 ```sh
@@ -21,8 +25,5 @@ $ npm install
 ```
 Następnie wpisać w terminal `ng serve` aby uruchomić aplikację. Po przejściu do  `http://localhost:4200/` aplikacja pojawi się w przeglądarce.
 
-## Testy
-
-Napisano przykładowe testy jednostkowe dla pliku score.service.ts.
    
 
