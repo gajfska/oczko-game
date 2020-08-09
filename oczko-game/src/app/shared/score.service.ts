@@ -36,4 +36,8 @@ export class ScoreService {
     }
     return GameResult.inProgress;
   }
+
+  throwCard() {
+    return GameResult.lost;
+  }
 }
