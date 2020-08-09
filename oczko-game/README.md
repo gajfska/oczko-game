@@ -1,27 +1,28 @@
-# OczkoGame
+# Gra w oczko
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Projekt
 
-## Development server
+Projekt przedstawia grę karcianą “oczko”. Aplikacja składa się z dwóch głównych ekranów: 
+- strony głównej, gdzie użytkownik może wybrać tryb gry (singleplayer lub multiplayer)
+- okna gry, które zawiera nazwę użytkownika, ilość zdobytych punktów, rozdawane karty oraz przyciski “Draw” i “Pass”
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Użyte technologie
 
-## Code scaffolding
+ - HTML
+ - Angular 9.1.3
+ - CSS
+ - Bootstrap
+ 
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Po ściągnięciu repozytorium należy wykonać polecenie:
+```sh
+$ npm install
+```
+Następnie wpisać w terminal `ng serve` aby uruchomić aplikację. Po przejściu do  `http://localhost:4200/` aplikacja pojawi się w przeglądarce.
 
-## Build
+## Testy
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Napisano przykładowe testy jednostkowe dla pliku score.service.ts.
+   
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
