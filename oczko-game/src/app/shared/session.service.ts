@@ -7,11 +7,11 @@ import {PlayerModel} from './player.model';
 export class SessionService {
 
   arrayOfPlayers = [
-    new PlayerModel( true, 'Kamil', true, true),
-    new PlayerModel( false, 'Werka', true, false)
+    new PlayerModel( true, 'Player 1'),
+    new PlayerModel( false, 'Player 2')
   ];
 
-  singlePlayer = [new PlayerModel( true, 'Kamil', true, true)];
+  singlePlayer = [new PlayerModel( true, 'Player 1')];
 
   isMultiplayerGame = false;
 

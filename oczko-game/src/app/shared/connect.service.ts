@@ -12,18 +12,11 @@ export class ConnectService {
 
   deckId: string;
 
-
-  startGame(): Observable<Card[]> {
+  fetchDeckId(): Observable<string> {
     return this.http.get<ShuffleResponse>('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
       .pipe(
         map(cards => {
           return cards.deck_id;
-        }),
-        tap(id => {
-          this.deckId = id;
-        }),
-        flatMap(id => {
-          return this.fetchCard(id, 2);
         }));
   }
 
