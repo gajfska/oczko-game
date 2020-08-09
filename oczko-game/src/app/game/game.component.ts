@@ -37,7 +37,7 @@ export class GameComponent implements OnInit {
   }
 
   getNextPlayingPlayerIndex(index: number): number {
-    let nextPlayerIndex = this.getNextPlayerIndex(index);
+    const nextPlayerIndex = this.getNextPlayerIndex(index);
     if (this.arrayOfPlayers[nextPlayerIndex].isPlaying === true) {
       return nextPlayerIndex;
     } else {
