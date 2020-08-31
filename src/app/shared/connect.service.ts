@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {flatMap, map, tap} from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import {Card, RootObject, ShuffleResponse} from './card.model';
 
 @Injectable({providedIn: 'root'})

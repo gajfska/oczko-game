@@ -56,8 +56,6 @@ export class GameComponent {
       const playerThatWon = this.arrayOfPlayers.find( player => player.gameResult === GameResult.won);
       const playersWhoPassed = this.arrayOfPlayers.filter(player => player.gameResult === GameResult.pass );
 
-      console.log(this.arrayOfPlayers);
-
       if (playerThatWon !== undefined) {
         alert(playerThatWon.name + ' won!');
       } else if (playersWhoPassed.length === 0) {
