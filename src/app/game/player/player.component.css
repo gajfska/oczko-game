@@ -1,31 +1,34 @@
-.header p{
-  font-size: 20px;
-  color: #f2e8cf;
+.header p {
+    font-size: 20px;
+    color: #f2e8cf;
 }
 
-#myimages { white-space: nowrap; }
+#myimages {
+    white-space: nowrap;
+}
+
 #myimages img {
-  display: block;
-  float: left;
-  margin: 10px;
-  width: 150px;
-  height: auto;
+    display: block;
+    float: left;
+    margin: 10px;
+    width: 150px;
+    height: auto;
 }
 
 .btn-red {
-  border-width: 2px;
-  border-radius: 5px;
-  border-color: #f2e8cf;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #bc4749;
-  font-size: 15px;
-  letter-spacing: 1px;
-  font-weight: 400;
-  color: #f2e8cf;
-  text-transform: uppercase;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #f2e8cf;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #bc4749;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #f2e8cf;
+    text-transform: uppercase;
 }
 
 .btn-red:hover, .btn-red:focus {
-  background-color: #386641;
+    background-color: #386641;
 }
