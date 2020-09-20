@@ -3,21 +3,30 @@ import {SessionService} from '../shared/session.service';
 import {PlayerModel} from '../shared/player.model';
 import {ConnectService} from '../shared/connect.service';
 import {GameResult} from '../shared/game-result.model';
+import {popupAnimation} from "../shared/animation";
 
 @Component({
     selector: 'app-game',
-    templateUrl: './game.component.html'
+    templateUrl: './game.component.html',
+    styleUrls: ['./game.component.css'],
+    animations: [popupAnimation]
 })
 export class GameComponent {
 
     currentActivePlayerIndex = 0;
     arrayOfPlayers: PlayerModel[] = [];
+    someoneLose = false;
+    showAlert = false;
+    nameWiner: string;
 
-    constructor(private sessionService: SessionService, private apiService: ConnectService) {
+
+    constructor(private sessionService: SessionService,
+                private apiService: ConnectService) {
         apiService.fetchDeckId().subscribe(deckId => {
             apiService.deckId = deckId;
             this.arrayOfPlayers = this.sessionService.players();
         });
+        console.log('game component')
     }
 
     receiveGameResult(): void {
@@ -57,7 +66,11 @@ export class GameComponent {
 
         if (playerThatWon !== undefined) {
             alert(playerThatWon.name + ' won!');
+            this.someoneLose = false;
+            this.showAlert = true;
         } else if (playersWhoPassed.length === 0) {
+            this.someoneLose = true;
+            this.showAlert = true;
             alert("Everyone lost!");
         } else {
             let maxScore = 0;
@@ -69,10 +82,10 @@ export class GameComponent {
                 }
             }
             alert(playersWhoPassed[winnerIndex].name + ' won!');
-
+            // this.nameWiner=playersWhoPassed[winnerIndex].name;
+            // this.someoneLose = false;
+            // this.showAlert = true;
         }
-
-
     }
 
 }

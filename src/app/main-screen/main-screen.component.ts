@@ -9,6 +9,7 @@ import {SessionService} from '../shared/session.service';
 export class MainScreenComponent {
 
     constructor(private sessionService: SessionService) {
+        console.log('elelelelel')
     }
 
     startMultiplayerGame(): void {

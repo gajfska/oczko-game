@@ -21,6 +21,15 @@ export class PlayerComponent {
 
     constructor(private connectService: ConnectService,
                 private scoreService: ScoreService) {
+        console.log(this.player)
+        // this.player.resetPlayer();
+    }
+
+
+    onAnimationDone( event: AnimationEvent ) {
+        if (this.player.gameResult !== GameResult.inProgress) {
+            this.gameResultEvent.emit();
+        }
     }
 
     isPassDisabled(): boolean {
@@ -57,10 +66,6 @@ export class PlayerComponent {
 
         this.player.gameResult = this.scoreService.checkGameResult(this.player.score, this.cards.length);
         this.player.isPlaying = this.player.gameResult === GameResult.inProgress;
-
-        if (this.player.gameResult !== GameResult.inProgress) {
-            this.gameResultEvent.emit();
-        }
     }
 
 }

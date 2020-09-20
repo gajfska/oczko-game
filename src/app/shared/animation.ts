@@ -36,4 +36,15 @@ export const showAnimation = trigger('showCard', [
     ])
 ]);
 
+export const popupAnimation = trigger('popOverState', [
+    state('show', style({
+        opacity: 1
+    })),
+    // state('hide',   style({
+    //     opacity: 0
+    // })),
+    // transition('show => hide', animate('600ms ease-out')),
+    transition('* => show', animate('1000ms ease-in'))
+]);
+
 

@@ -1,6 +1,32 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6" *ngFor="let player of arrayOfPlayers">
+        <div class=" header col-md-4">
+            <p>OCZKO</p>
+        </div>
+
+        <div class="custom-alert col-md-4" *ngIf="someoneLose === true && showAlert === true" [@popOverState]>
+            <p>You lose</p>
+            <div class="button-class">
+                <button class="btn btn-red" routerLink="/mainScreen">Back to menu</button>
+            </div>
+        </div>
+
+        <div class="custom-alert col-md-4" *ngIf="someoneLose === false && showAlert === true" [@popOverState]>
+            <p>{{nameWiner}} win!</p>
+            <div class="button-class">
+                <button class="btn btn-red" routerLink="/mainScreen">Back to menu</button>
+            </div>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-6" *ngFor="let player of arrayOfPlayers">
             <app-player (gameResultEvent)="receiveGameResult()"
                         [player]="player">
             </app-player>

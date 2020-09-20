@@ -12,4 +12,10 @@ export class PlayerModel {
         this.isActive = state;
         this.name = name;
     }
+
+    resetPlayer() {
+        this.isPlaying = true;
+        this.score = 0;
+        this.gameResult = GameResult.inProgress;
+    }
 }

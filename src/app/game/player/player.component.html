@@ -7,7 +7,7 @@
     </div>
 
     <div>
-        <div [@showCard] id="myimages" *ngFor="let card of cards">
+        <div [@showCard] (@showCard.done)="onAnimationDone($event)" id="myimages" *ngFor="let card of cards">
             <img src="{{card.image}}" alt="">
         </div>
     </div>
