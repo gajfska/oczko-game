@@ -27,3 +27,6 @@ Następnie wpisać w terminal `ng serve` aby uruchomić aplikację. Po przejści
 
    
 
+## Live
+
+https://oczko.gajska.pl
